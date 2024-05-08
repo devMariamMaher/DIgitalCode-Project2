@@ -1,0 +1,95 @@
+.ourBranches{
+    padding-inline: 5rem;
+    padding-block: 5rem;
+    text-align: right;
+    position: relative;
+
+    h2{
+        color: $mainColor;
+        font-size: 28px;
+        margin-bottom: 2rem;
+        position: relative;
+
+        &::before, &::after{
+            content: "";
+            position: absolute;
+            bottom: -0.8rem;
+        }
+
+        &::before{
+            width: 8.8%;
+            height: 0.3rem;
+            background-color: $secondColor;
+            border-radius: 1rem;
+            right: 0;
+        }
+
+        &::after{
+            width: 2%;
+            border-bottom-style: dotted;
+            border-width: 5px;
+            border-color: $secondColor;
+            left: 75.3rem;
+        }
+    }
+
+    .slick-slider {
+        .slick-arrow {
+            display: none !important;
+        }
+        
+        .slick-list{
+            width: 76rem;
+            margin: auto;
+    
+            .slick-slide{
+                width: 17rem !important;
+                margin-left: 2rem;
+    
+                .eachBranch{
+                    background-color: #fff5e0;
+                    padding: 2rem 1rem;
+                    border-radius: 1rem;
+                    text-align: center;
+            
+                    span{
+                        font-size: 26px;
+                        color: $mainColor;
+                    }
+            
+                    h5{
+                        color: $secondColor;
+                        font-size: 16px;
+                        margin: 0.5rem 0 0.8rem;
+                    }
+            
+                    p{
+                        color: $mainColor;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    .arrows{
+        .nextArrow, .prevArrow{
+            position: absolute;
+            top: 5rem;
+            color: $secondColor;
+            border: 1px solid $secondColor;
+            border-radius: 50%;
+            padding: 0.2rem;
+            width: 2rem;
+            height: 2rem;
+        }
+        
+        .nextArrow{
+            left: 8rem;
+        }
+
+        .prevArrow{
+            left: 5rem;
+        }
+    }
+}

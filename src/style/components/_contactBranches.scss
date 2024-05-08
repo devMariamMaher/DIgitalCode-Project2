@@ -1,0 +1,56 @@
+.contactBranches{
+    padding-inline: 5rem;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    
+    .branchesMap{
+        margin-left: 2rem;
+        img{
+            width: 40rem;
+        }
+    }
+    
+    .sectionContent{
+        text-align: right;
+        align-content: center;
+
+        h2{
+            color: $mainColor;
+            font-size: 28px;
+            margin-bottom: 2rem;
+        }
+
+        p{
+            color: $greyColor;
+            line-height: 1.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .phoneNos{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: end;
+            column-gap: 8rem;
+
+            .eachNo{
+                display: flex;
+                flex-direction: row-reverse;
+                gap: 0.5rem;
+
+                span{
+                    color: $secondColor;
+                    font-size: 18px;
+                    transform: scaleX(-1);
+                }
+                
+                p{
+                    font-family: "Poppins", sans-serif;
+                    color: $mainColor;
+                    font-size: 18px;
+                    font-weight: 600
+                }
+            }
+        }
+    }
+}

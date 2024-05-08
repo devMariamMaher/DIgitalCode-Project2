@@ -1,0 +1,59 @@
+.topBar{
+    width: 100%;
+    height: 60px;
+    background-color: #4da09e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-inline: 5rem;
+
+    .tbSocialMediaIcons{
+        ul{
+            display: flex;
+            flex-direction: row-reverse;
+
+            li{
+                color: white;
+                font-size: 18px;
+
+                &:not(:last-of-type){
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+    .tbMail, .tbLocation, .tbCall{
+        display: flex;
+    }
+
+    .tbMail span, .tbLocation span, .tbCall span{
+        color: white;
+        font-size: 18px;
+        margin-right: 0.5rem;
+    }
+
+    .tbLocation p, .tbCall p{
+        color: white;
+    }
+    
+    .tbMail{
+        span{
+            font-size: 20px;
+        }
+
+        p{
+            a{
+                color: white;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .tbCall{
+        p{
+            font-family: "Poppins", sans-serif;
+        }
+    }
+}
