@@ -26,7 +26,7 @@ export const Footer = () => {
                         </div>
 
                         <div className="footerMap">
-                            <img src="/public/images/map.png" alt=""/>
+                            <img src="/images/map.png" alt=""/>
                         </div>
                     </div>
 
