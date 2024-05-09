@@ -20,8 +20,8 @@ export const Navbar = () => {
                 <li><NavLink className={({isPending, isActive})=>isPending? "pending" : isActive? "active" : ""} to="">الرئيسية</NavLink></li>
                 <li><NavLink className={({isPending, isActive})=>isPending? "pending" : isActive? "active" : ""} to="">السيارات</NavLink></li>
                 <li><NavLink className={({isPending, isActive})=>isPending? "pending" : isActive? "active" : ""} to="">العروض</NavLink></li>
-                <li><NavLink className={({isPending, isActive})=>isPending? "pending" : isActive? "active" : ""} to="">قطاع الأعمال</NavLink></li>
-                <li><NavLink className={({isPending, isActive})=>isPending? "pending" : isActive? "active" : ""} to="/عن الشركة">عن الشركة</NavLink></li>
+                <li><NavLink className={({isPending, isActive})=>isPending? "pending" : isActive? "active" : ""} to="/قطاع-الأعمال">قطاع الأعمال</NavLink></li>
+                <li><NavLink className={({isPending, isActive})=>isPending? "pending" : isActive? "active" : ""} to="/عن-الشركة">عن الشركة</NavLink></li>
                 <li><NavLink className={({isPending, isActive})=>isPending? "pending" : isActive? "active" : ""} to="/الفروع">الفروع</NavLink></li>
             </ul>
 
