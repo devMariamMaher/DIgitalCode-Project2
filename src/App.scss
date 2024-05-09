@@ -4,6 +4,9 @@
 @import "./variables";
 @import "./style/components/topBar";
 @import "./style/components/navbar";
+@import "./style/components/auHeader";
+@import "./style/components/auWhoIsStrong";
+@import "./style/components/auServices";
 @import "./style/components/contactBranches";
 @import "./style/components/ourBranches";
 @import "./style/components/footer";
@@ -13,6 +16,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
+}
+
+body{
+  direction: rtl;
 }
 
 ul{

@@ -31,7 +31,7 @@ export const TopBar = () => {
 
         <div className="tbCall">
             <span><FiPhoneCall/></span>
-            <p>+966580035754</p>
+            <p>966580035754+</p>
         </div>
     </div>
   )

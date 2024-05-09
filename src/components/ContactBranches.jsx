@@ -16,22 +16,22 @@ export const ContactBranches = () => {
         <div className="phoneNos">
           <div className="eachNo">
             <span><FiPhoneCall/></span>
-            <p>+966580035754</p>
+            <p>966580035754+</p>
           </div>
           
           <div className="eachNo">
             <span><FiPhoneCall/></span>
-            <p>+966580035754</p>
+            <p>966580035754+</p>
           </div>
           
           <div className="eachNo">
             <span><FiPhoneCall/></span>
-            <p>+966580035754</p>
+            <p>966580035754+</p>
           </div>
           
           <div className="eachNo">
             <span><FiPhoneCall/></span>
-            <p>+966580035754</p>
+            <p>966580035754+</p>
           </div>
         </div>
       </div>

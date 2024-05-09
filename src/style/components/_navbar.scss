@@ -2,7 +2,6 @@ nav, .navLinks{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row-reverse;
 }
 
 nav{
@@ -19,49 +18,183 @@ nav{
             width: 12rem;
         }
     }
-
-    .navLinks{
-        li{
-            a{
-                color: $mainColor;
-                font-size: 18px;
-                font-weight: 400;
-                transition: 0.3s;
-                position: relative;
-
-                &:hover{
-                    color: #4da09e;
-                }
-                
-                &.active{
-                    color: $secondColor;
-                    
-                    &::before, &::after{
-                        content: "";
-                        position: absolute;
-                        bottom: -0.5rem;
+    
+    .navTabs{
+        .navLinks{
+            li{
+                a{
+                    color: $mainColor;
+                    font-size: 18px;
+                    font-weight: 400;
+                    transition: 0.3s;
+                    position: relative;
+    
+                    &:hover{
+                        color: #4da09e;
                     }
                     
-                    &::before{
-                        width: 61%;
-                        height: 0.15rem;
-                        background-color: $secondColor;
-                        border-radius: 1rem;
-                        right: 0;
+                    &.active{
+                        color: $secondColor;
+                        
+                        &::before, &::after{
+                            content: "";
+                            position: absolute;
+                            bottom: -0.5rem;
+                        }
+                        
+                        &::before{
+                            width: 61%;
+                            height: 0.15rem;
+                            background-color: $secondColor;
+                            border-radius: 1rem;
+                            right: 0;
+                        }
+    
+                        &::after{
+                            width: 31%;
+                            border-bottom-style: dotted;
+                            border-width:3.5px;
+                            left: 0;
+                        }
                     }
+    
+                }
+    
+                &:not(:last-of-type){
+                    margin-left: 3rem;
+                }
+            }
+        }
 
-                    &::after{
-                        width: 31%;
-                        border-bottom-style: dotted;
-                        border-width:3.5px;
-                        left: 0;
+        .menuIcon {
+            display: none;
+    
+            #menu{
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// responsive
+
+
+// tablet
+
+@media (max-width: 991px){
+    nav{
+        .logo{
+            img{
+                width: 10rem;
+            }
+        }
+    
+        .navTabs{
+            position: relative;
+            .navLinks{
+                display: unset;
+                background-color: white;
+                width: 45.5rem;
+                padding: 1rem;
+                position: absolute;
+                top: 3.2rem;
+                left: 0rem;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.4s;
+
+                li{
+                    margin-bottom: 1rem;                    
+                    
+                    a{
+                        &.active{
+                            &::before, &::after{
+                                display: none;
+                            }                
+                        }
                     }
                 }
-
             }
 
-            &:not(:last-of-type){
-                margin-left: 3rem;
+            &.menuOpen {
+                ul {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+    
+            .navIcons{
+                .menuIcon {
+                    font-size: 22px;
+                    display: block;
+                    margin-right: 1rem;
+                    position: relative;
+                    top: 0.1rem;
+            
+                    #menu{
+                        display: none;
+                    }
+
+                    &:hover{
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+// mobile
+
+@media (max-width: 480px){
+    nav{
+        padding-inline: 2rem;
+
+        .logo{
+            img{
+                width: 8rem;
+            }
+        }
+
+        .navTabs{
+            .navLinks{
+                width: 18.5rem;
+                top: 3rem;
+
+                li{
+                    margin-left: 0.5rem;
+                    margin-bottom: 0.5rem;                    
+                    
+                    a{
+                        font-size: 14px;
+                        &.active{
+                            &::before, &::after{
+                                display: none;
+                            }                
+                        }
+                    }
+                }
             }
         }
     }

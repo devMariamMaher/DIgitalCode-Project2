@@ -35,7 +35,7 @@ export const Footer = () => {
 
                         <div className="footerCall">
                             <span><FiPhoneCall/></span>
-                            <p>+966580035754</p>
+                            <p>966580035754+</p>
                         </div>
 
                         <div className="footerLocation">

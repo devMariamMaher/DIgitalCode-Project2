@@ -22,9 +22,7 @@ footer{
             
             .allSections{
                 display: flex;
-                flex-direction: row-reverse;
                 justify-content: space-between;
-                text-align: right;
                 color: white;
         
                 .eachSection{
@@ -52,7 +50,6 @@ footer{
 
                     .footerCall, .footerLocation, .footerMail{
                         display: flex;
-                        flex-direction: row-reverse;
                         margin-bottom: 1rem;
 
                         span{
@@ -87,7 +84,6 @@ footer{
                         input{
                             width: 18rem;
                             height: 3rem;
-                            text-align: end;
                             padding-inline: 1rem;
                             border-radius: 0.5rem;
                             border: none;
@@ -103,7 +99,12 @@ footer{
                             border-radius: 0.5rem;
                             background-color: $mainColor;
                             color: white;
+                            transition: 0.3s;
                             cursor: pointer;
+                            
+                            &:hover{
+                                background-color: #4da09e;
+                            }
                         }
                     }
                 }
@@ -113,14 +114,13 @@ footer{
         .footerBottom{
             padding-block: 2rem;
             display: flex;
-            flex-direction: row-reverse;
             justify-content: space-between;
             color: white;
             
             .copyrights{
                 display: flex;
-                flex-direction: row-reverse;
                 gap: 0.4rem;
+
                 span{
                     transform: scaleX(-1);
                 }
@@ -129,7 +129,6 @@ footer{
             .footerSMIcons{
                 ul{
                     display: flex;
-                    flex-direction: row-reverse;
                     gap: 1rem;
                     font-size: 22px;
 
@@ -140,4 +139,201 @@ footer{
             }
         }
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// responsive
+
+
+// tablet
+
+@media (max-width: 991px){
+    footer{
+        .footerBG{
+            overflow: hidden;
+
+            img{
+                width: fit-content;
+                height: 30rem;
+            }
+        }
+    
+        .footerContent{
+            .footerTop{
+                padding-top: 2rem;
+                padding-bottom: 3rem;
+                
+                .allSections{
+                    justify-content: unset;
+                    row-gap: 3rem;
+                    column-gap: 5rem;
+                    flex-wrap: wrap;
+            
+                    .eachSection{
+                        .footerLogo{
+                            margin-bottom: 1rem;
+    
+                            img{
+                                width: 12rem;
+                            }
+                        }
+            
+                        .footerMap{
+                            img{
+                                width: 15rem;
+                            }
+                        }
+    
+                        h3{
+                            font-size: 18px;
+                        }
+    
+                        .footerCall, .footerLocation, .footerMail{
+                            span{
+                                margin-left: 0.5rem;
+                            }
+                        }
+    
+                        .footerEmail{
+                            input{
+                                width: 15rem;
+                            }
+                        }
+                    }
+                }
+            } 
+            
+            .footerBottom{
+                padding-block: 0;
+                padding-top: 1.5rem;
+                
+                .footerSMIcons{
+                    ul{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+
+
+
+
+
+
+
+
+// mobile
+
+@media (max-width: 480px){
+    footer{
+        .footerBG{
+            img{
+                width: fit-content;
+                height: 57rem;
+            }
+        }
+    
+        .footerContent{
+            padding-inline: 2rem;
+    
+            .footerTop{
+                padding-top: 2rem;
+                padding-bottom: 5rem;
+                
+                .allSections{
+                    flex-direction: column;
+                    justify-content: space-between;
+            
+                    .eachSection{
+                        width: fit-content;
+
+                        .footerLogo{
+                            width: fit-content;
+                            margin: auto;
+                            margin-bottom: 2rem;
+    
+                            img{
+                                width: 10rem;
+                            }
+                        }
+            
+                        .footerMap{
+                            img{
+                                width: 15rem;
+                            }
+                        }
+    
+                        h3{
+                            font-size: 16px;
+                        }
+    
+                        .footerCall, .footerLocation, .footerMail{
+                            display: flex;
+                            margin-bottom: 1rem;
+    
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+    
+                        ul{
+                            li{
+                                font-size: 14px;
+                            }
+                        }
+    
+                        .footerEmail{
+                            position: relative;
+    
+                            input{
+                                width: 15rem;
+                            }
+                        }
+                    }
+                }
+            } 
+            
+            .footerBottom{
+                padding-top: 1rem;
+                flex-direction: column;
+                justify-content: unset;
+                row-gap: 1rem;
+                
+                .copyrights{
+                    display: flex;
+                    gap: 0.4rem;
+
+                    p{
+                        font-size: 14px;
+                    }
+    
+                    span{
+                        font-size: 14px;
+                    }
+                }
+    
+                .footerSMIcons{
+                    ul{
+                        display: flex;
+                        gap: 1rem;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }    
 }

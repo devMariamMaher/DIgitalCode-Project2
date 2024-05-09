@@ -1,0 +1,207 @@
+.auServices{
+    padding-inline: 5rem;
+    padding-bottom: 5rem;
+    position: relative;
+
+    h2{
+        color: $mainColor;
+        font-size: 28px;
+        margin-bottom: 3rem;
+        position: relative;
+
+        &::before, &::after{
+            content: "";
+            position: absolute;
+            bottom: -0.8rem;
+        }
+
+        &::before{
+            width: 5.2%;
+            height: 0.3rem;
+            background-color: $secondColor;
+            border-radius: 1rem;
+            right: 0;
+        }
+
+        &::after{
+            width: 2%;
+            border-bottom-style: dotted;
+            border-width: 5px;
+            border-color: $secondColor;
+            right: 5rem;
+        }
+    }
+
+    .slick-slider {
+        .slick-arrow {
+            display: none !important;
+        }
+        
+        .slick-list{
+            width: 60rem;
+            margin: auto;
+    
+            .slick-slide{
+                width: 18rem !important;
+                margin-left: 2rem;
+    
+                .eachService{
+                    background-color: #fff5e0;
+                    padding: 2rem 1rem;
+                    border-radius: 1rem;
+                    text-align: center;
+            
+                    img{
+                        width: 4rem;
+                        margin: auto;
+                    }
+            
+                    h5{
+                        color: $secondColor;
+                        font-size: 16px;
+                        margin: 0.5rem 0 0.8rem;
+                    }
+            
+                    p{
+                        color: $greyColor;
+                    }
+                }
+            }
+        }
+    }
+
+    .arrows{
+        .nextArrow, .prevArrow{
+            position: absolute;
+            top: 0rem;
+            color: $secondColor;
+            border: 1px solid $secondColor;
+            border-radius: 50%;
+            padding: 0.2rem;
+            width: 2rem;
+            height: 2rem;
+        }
+        
+        .nextArrow{
+            left: 8rem;
+        }
+
+        .prevArrow{
+            left: 5rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// responsive
+
+
+// tablet
+
+@media (max-width: 991px){
+    .auServices{
+        h2{
+            font-size: 26px;
+    
+            &::before{
+                width: 10%;
+            }
+    
+            &::after{
+                width: 3%;
+                right: 4.8rem;
+            }
+        }
+    
+        .slick-slider {
+            .slick-list{
+                width: 40rem;
+            }
+        }
+    
+        .arrows{
+            .nextArrow, .prevArrow{
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+        }
+    }    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// mobile
+
+@media (max-width: 480px){
+    .auServices{
+        padding-inline: 2rem;
+    
+        h2{
+            font-size: 24px;
+    
+            &::before{
+                width: 20.8%;
+            }
+    
+            &::after{
+                width: 8%;
+                right: 4.2rem;
+            }
+        }
+    
+        .slick-slider {
+            .slick-list{
+                width: 20rem;
+        
+                .slick-slide{
+                    width: 16rem !important;
+                    margin: 0 2rem;
+        
+                    .eachService{
+                        img{
+                            width: 3rem;
+                        }
+                
+                        p{
+                            font-size: 14px;
+                            line-height: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .arrows{
+            .nextArrow, .prevArrow{
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            
+            .nextArrow{
+                left: 5rem;
+            }
+    
+            .prevArrow{
+                left: 2rem;
+            }
+        }
+    }    
+}

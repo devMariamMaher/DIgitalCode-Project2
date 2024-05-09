@@ -1,0 +1,204 @@
+.whoIsStrong{
+    padding-inline: 5rem;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    .whoIsStrong-img{
+        position: relative;
+
+        &::before, &::after{
+            content: "";
+            width: 25.5rem;
+            height: 24rem;
+            border-radius: 2rem;
+            position: absolute;
+            right: -0.5rem;
+        }
+        
+        &::before{
+            background-color: $secondColor;
+            top: -2rem;
+            z-index: -1;
+        }
+        
+        &::after{
+            border: 4px solid $mainColor;
+            top: -2.2rem;
+            transform: rotate(-14deg);
+            z-index: -2;
+        }
+
+        img{
+            width: 35rem;
+        }
+    }
+
+    .whoIsStrong-content{
+        h2{
+            color: $mainColor;
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 3rem;
+
+            span{
+                color: $secondColor;
+                position: relative;
+
+                &::before{
+                    content: "";
+                    width: 100%;
+                    height: 8rem;
+                    background-color: $secondColor;
+                    position: absolute;
+                    bottom: -8.5rem;
+                    clip-path: polygon(100% 0, 91% 3%, 14% 5%, 0 0);
+                }
+            }
+        }
+
+        p{
+            color: $greyColor;
+            line-height: 1.8rem;
+            margin-bottom: 3rem;
+        }
+
+        .auFeatures{
+            display: flex;
+            gap: 3rem;
+
+            .eachFeature{
+                width: 10rem;
+                padding: 1rem;
+                box-shadow: 0px 0px 10px #e7e7e7;
+                border-radius: 0.8rem;
+                text-align: center;
+
+                p{
+                    color: black;
+                    font-size: 20px;
+                    font-weight: 500;
+                    margin-bottom: 0;
+
+                    span{
+                        color: $secondColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// responsive
+
+
+// tablet
+
+@media (max-width: 991px){
+    .whoIsStrong{
+        padding-top: 5rem;
+        padding-bottom: 10rem;
+        gap: 2rem;
+    
+        .whoIsStrong-img{
+            margin-right: 2rem;
+            &::before, &::after{
+                content: "";
+                width: 16rem;
+                height: 16rem;
+            }
+                
+            img{
+                width: 22rem;
+            }
+        }
+    
+        .whoIsStrong-content{
+            h2{
+                font-size: 26px;
+            }
+
+            p{
+                font-size: 14px;
+            }
+    
+            .auFeatures{
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+    
+                .eachFeature{
+                    width: 9rem;
+
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// mobile
+
+@media (max-width: 480px){
+    .whoIsStrong{
+        padding-inline: 2rem;
+        flex-direction: column-reverse;
+        gap: 7rem;
+    
+        .whoIsStrong-img{
+            &::before, &::after{
+                content: "";
+                width: 12.8rem;
+                height: 12.8rem;
+            }
+                
+            img{
+                width: 17rem;
+            }
+        }
+    
+        .whoIsStrong-content{
+            h2{
+                font-size: 24px;
+            }
+    
+            .auFeatures{
+                gap: 2rem;
+    
+                .eachFeature{
+                    width: 8.5rem;
+                    text-align: center;
+    
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
